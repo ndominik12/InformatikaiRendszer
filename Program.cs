@@ -18,7 +18,8 @@ namespace InformatikaiRendszer
                 adatok[i] = int.Parse(sorok[i].Trim());
             }
 
-            Console.WriteLine("Beolvasas kesz.");
+            Console.WriteLine($"2. feladat:");
+            Console.WriteLine($"A fajlban {adatok.Length} meresi adat talalhato.");
         }
     }
 }
