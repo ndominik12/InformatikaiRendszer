@@ -20,6 +20,17 @@ namespace InformatikaiRendszer
 
             Console.WriteLine($"2. feladat:");
             Console.WriteLine($"A fajlban {adatok.Length} meresi adat talalhato.");
+
+            int hibak = 0;
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                if (adatok[i] == -1)
+                    hibak++;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("3. feladat:");
+            Console.WriteLine($"Meresi hibak szama: {hibak}");
         }
     }
 }
