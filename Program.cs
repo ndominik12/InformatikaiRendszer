@@ -63,6 +63,13 @@ namespace InformatikaiRendszer
             Console.WriteLine();
             Console.WriteLine("5. feladat:");
             Console.WriteLine($"Osszes kolcsonzott konyv: {osszesen}");
+
+            int hibatlanok = adatok.Length - hibak;
+            double atlag = (double)osszesen / hibatlanok;
+
+            Console.WriteLine();
+            Console.WriteLine("6. feladat:");
+            Console.WriteLine($"Atlagos kolcsonzesi szam: {atlag:F2}");
         }
     }
 }
