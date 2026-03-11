@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace InformatikaiRendszer
 {
@@ -70,6 +70,17 @@ namespace InformatikaiRendszer
             Console.WriteLine();
             Console.WriteLine("6. feladat:");
             Console.WriteLine($"Atlagos kolcsonzesi szam: {atlag:F2}");
+
+            using (StreamWriter sw = new StreamWriter("statisztika.txt"))
+            {
+                sw.WriteLine(hibak);
+                sw.WriteLine(osszesen);
+                sw.WriteLine(atlag.ToString("F2"));
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("7. feladat:");
+            Console.WriteLine("statisztika.txt elkeszult.");
         }
     }
 }
