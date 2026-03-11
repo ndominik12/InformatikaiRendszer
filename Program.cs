@@ -18,7 +18,7 @@ namespace InformatikaiRendszer
                 adatok[i] = int.Parse(sorok[i].Trim());
             }
 
-            Console.WriteLine($"2. feladat:");
+            Console.WriteLine("2. feladat:");
             Console.WriteLine($"A fajlban {adatok.Length} meresi adat talalhato.");
 
             int hibak = 0;
@@ -52,6 +52,17 @@ namespace InformatikaiRendszer
             Console.WriteLine();
             Console.WriteLine("4. feladat:");
             Console.WriteLine($"Legtobb kolcsonzes: {idok[maxIndex]} ({maxErtek} konyv)");
+
+            int osszesen = 0;
+            for (int i = 0; i < adatok.Length; i++)
+            {
+                if (adatok[i] != -1)
+                    osszesen += adatok[i];
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("5. feladat:");
+            Console.WriteLine($"Osszes kolcsonzott konyv: {osszesen}");
         }
     }
 }
